@@ -1,0 +1,14 @@
+.keypad {
+  a {
+    position: relative;
+    padding: calculateRem($font-size-h2 + 1.5);
+    @include border-radius(50%);
+    @include border($keypad-border-size, $keypad-border-style, $keypad-border);
+    font-size: 0;
+    display: inline-block;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    @include position-vh($marginTop: $font-size-h2 / 1.5);
+    @include font-size($font-size-h2);
+  }
+}

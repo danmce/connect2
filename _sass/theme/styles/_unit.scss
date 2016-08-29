@@ -1,0 +1,14 @@
+.unit-container {
+  @extend .tile-container;
+}
+.unit {
+  @extend .tile;
+  @extend .col-tile;
+}
+.unit-inner {
+  @extend .tile-inner;
+  @include padding();
+  @include border();
+  @include border-radius();
+  background-color: $gray-lighter;
+}

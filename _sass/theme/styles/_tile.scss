@@ -1,0 +1,43 @@
+/* all flex box items inherit from this, don't change this, change them */
+
+.tile-container {
+    @extend .row;
+}
+
+.tile {
+  position: relative;
+  float: left;
+  padding: $gutter-left-and-top $gutter-right-and-bottom $gutter-right-and-bottom $gutter-left-and-top;
+  min-height: 1px;
+}
+
+.col-tile {
+  width: 100%;
+  @media (min-width: $screen-sm-min) {
+    width: 50%;
+  }
+  @media (min-width: $screen-md-min) {
+    width: 33.333%;
+  }
+}
+
+.flexbox {
+  .tile-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &:before {
+      content: none;
+    }
+  }
+  .tile {
+    float: none;
+    display: flex;
+  }
+  .tile-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+}

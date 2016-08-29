@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<div class="container-fluid">
+    {% if page.headline %}
+    <div class="row headline {{ page.headline.class }}">
+        <div class="col-xs-12">
+            <h3>{{ page.headline.text }}</h3>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if page.preContent %}
+    <div class="row">
+        {% for preContent in page.preContent %}
+        <div class="{{ preContent.wrapperClass }}">
+            {% if preContent.item %}
+            {% include {{ preContent.item }} %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.contentLocation != null %} <!-- Changed to not null as it output a blank row on homepage: DH -->
+    <div class="row">
+        <div class="col-xs-12">
+            {{content}}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if page.feature %}
+    <div class="row brand {{ page.featureStyle }}">
+        {% for feature in page.feature %}
+        <div class="{{ feature.wrapperClass }}">
+            {% if page.contentLocation == feature.item %}
+            {{content}}
+            {% endif %}
+            {% if feature.item %}
+            {% include {{ feature.item }} %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.units %}
+    <div class="row">
+        {% for unit in page.units %}
+        <div class="{{ unit.wrapperClass }}">
+            {% assign unit_path = 'units/~.html' | replace: '~', unit.id %}
+            {% include {{unit_path}} unit=true %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    {% if page.footer %}
+    <div class="row">
+        {% for footer in page.footer %}
+        <div class="{{ footer.wrapperClass }}">
+            {% if footer.item %}
+            {% include {{ footer.item }} %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>

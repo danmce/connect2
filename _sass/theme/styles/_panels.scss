@@ -1,0 +1,3 @@
+.panel-title {
+  @include font-size(ceil(($font-size-base * 1.125)));
+}

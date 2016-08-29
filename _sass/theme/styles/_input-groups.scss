@@ -1,0 +1,9 @@
+.input-group-addon {
+  @include font-size($font-size-base);
+  &.input-sm {
+    @include font-size($font-size-small);
+  }
+  &.input-lg {
+    @include font-size($font-size-large);
+  }
+}

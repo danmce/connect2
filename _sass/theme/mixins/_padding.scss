@@ -1,0 +1,3 @@
+@mixin padding($top: $gutter-left-and-top, $right:  $gutter-right-and-bottom, $bottom: $gutter-right-and-bottom, $left: $gutter-left-and-top) {
+  padding: $top $right $bottom $left;
+}

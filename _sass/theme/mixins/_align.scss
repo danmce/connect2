@@ -1,0 +1,47 @@
+//== Absolute Position Alignment
+//
+// ##
+
+@mixin position-vh($top: 50%, $left: 50%, $marginTop: 10%) {
+  position: absolute;
+  text-align: center;
+  margin-top: $marginTop;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @at-root .csstransforms #{&} {
+    margin-top: 0;
+    top: $top;
+    left: $left;
+    right: auto;
+    transform: translate(-$top, -$left);
+  }
+}
+
+//== Static Position Alignment
+//
+// ##
+
+@mixin align-vh($marginTop: 10%) {
+  text-align: center;
+
+  >div {
+    margin-top: $marginTop;
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @at-root .flexbox #{&} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    >div {
+      margin-top: 0;
+    }
+
+  }
+}

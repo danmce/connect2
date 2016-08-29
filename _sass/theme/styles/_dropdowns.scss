@@ -1,0 +1,6 @@
+.dropdown-menu {
+  @include font-size($font-size-base);
+}
+.dropdown-header {
+  @include font-size($font-size-small);
+}

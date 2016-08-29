@@ -1,0 +1,6 @@
+.medial {
+  min-height: 350px;
+  @include border();
+  @include border-radius();
+  @include align-vh();
+}

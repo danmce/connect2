@@ -1,0 +1,34 @@
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Connect
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-primary">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Homepage navigation items have scrollTo events -->
+                {% if page.viewName == "home" %}
+                    {% for nav in site.data.navigation-primary %}
+                    <li>
+                        <a href="{{ nav.url }}" class="{{ nav.class }}">{{ nav.title }}</a>
+                    </li>
+                    {% endfor %}
+                <!-- Other pages will need to be navigated to -->
+                {% else %}
+                    {% for nav in site.data.navigation-primary %}
+                    <li>
+                        <a href="{{ nav.url }}" class="{{ nav.class }}">{{ nav.title }}</a>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

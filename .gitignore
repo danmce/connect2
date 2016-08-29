@@ -1,0 +1,10 @@
+node_modules
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Gradle:
+.idea/libraries
+

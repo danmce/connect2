@@ -1,0 +1,9 @@
+exclude: [node_modules, lib, gulpfile.js, package.json, README.md]
+include: ["_pages"]
+permalink: /:title/
+
+kramdown:
+  auto_ids: false
+
+collections:
+  units:

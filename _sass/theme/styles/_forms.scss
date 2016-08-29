@@ -1,0 +1,47 @@
+legend {
+  @include font-size($font-size-base * 1.5);
+}
+
+output {
+  @include font-size($font-size-base);
+}
+
+.form-control {
+  @include font-size($font-size-base);
+}
+
+.input-sm {
+  @include font-size($font-size-small);
+}
+
+.form-group-sm {
+  .form-control {
+    @include font-size($font-size-small);
+  }
+  .form-control-static {
+    @include font-size($font-size-small);
+  }
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+      @include font-size($font-size-small);
+    }
+  }
+}
+
+.input-lg {
+  @include font-size($font-size-large);
+}
+
+.form-group-lg {
+  .form-control {
+    @include font-size($font-size-large);
+  }
+  .form-control-static {
+    @include font-size($font-size-large);
+  }
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+      @include font-size($font-size-large);
+    }
+  }
+}

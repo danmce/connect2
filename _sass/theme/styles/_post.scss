@@ -1,0 +1,10 @@
+.post-container {
+  @extend .tile-container;
+}
+.post {
+  @extend .tile;
+  @extend .col-tile;
+}
+.post-inner {
+  @extend .tile-inner;
+}

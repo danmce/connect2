@@ -1,0 +1,10 @@
+.cell-container {
+  @extend .tile-container;
+}
+.cell {
+  @extend .tile;
+  @extend .col-tile;
+}
+.cell-inner {
+  @extend .tile-inner;
+}

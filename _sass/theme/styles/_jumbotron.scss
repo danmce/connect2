@@ -1,0 +1,9 @@
+.jumbotron {
+  p {
+    @include font-size($jumbotron-font-size);
+  }
+  h1,
+  .h1 {
+    @include font-size($jumbotron-heading-font-size);
+  }
+}

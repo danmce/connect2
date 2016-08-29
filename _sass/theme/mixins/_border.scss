@@ -1,0 +1,3 @@
+@mixin border($size: $border-size-default, $style: $border-style-default, $color: $border-default) {
+  border: $size $style $color;
+}
